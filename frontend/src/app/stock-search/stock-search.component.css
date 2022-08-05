@@ -1,0 +1,75 @@
+.mat-display-3 {
+	font-family: 'Hind', sans-serif;
+	font-weight: 700;
+	font-size: 2em;
+	text-align: center;
+	margin: 3vh 0 5vh;
+	z-index: 6;
+}
+
+.form-group {
+	margin: 0;
+	position: absolute;
+	width: 17.3em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	outline: none;
+	box-shadow: 0 0 0 2.5px #1e209b; /*0.15em*/
+	border-radius: 25px;
+	width: 30%;
+}
+
+input:focus {
+	box-shadow: none;
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+	width: 70%
+}
+
+input[type="text"] {
+	outline: none;
+	border: transparent;
+	border-radius: 25px;
+	font-size: small;
+	padding-left: 0.8em;
+}
+
+.mat-button {
+	position: absolute;
+	top: 0.0em;
+	right: 0.9em;
+	border-style: none;
+}
+
+.mat-button:focus, .mat-button:active {
+	outline: none !important;
+	/* border:2px solid #ccc; */
+	/* border-radius: 0.2em; */
+}
+
+.bi-search {
+	margin-left: -7em; 
+	/* margin-right: 2.5em; */
+	margin-top: 0.3em; 
+	margin-bottom: 0.5em;
+	vertical-align: middle;
+	display: inline-block;
+	height: 1.3em;
+	width: 1.3em;
+}
+
+.bi-x {
+	margin-left: 0.5em; 
+	margin-right: -0.5em;
+	margin-top: 0.1em;
+	vertical-align: middle;
+	display: inline-block;
+	height: 2.3em;
+	width: 2.3em;
+}

@@ -1,0 +1,32 @@
+.navbar {
+	position: fixed;
+	background-color: #1e209b;
+	top: 0;
+	width:100%;
+}
+
+.navbar-brand{
+	font-size: 1.20rem;
+}
+
+.nav-item.active {
+	border-radius:0.8em;
+	border:1px solid #fff;
+}
+
+.navbar-nav {
+	margin-right: 1.3%;
+	font-size: small;
+}
+
+.navbar-expand-lg{
+	width: 100%;
+	position: fixed; 
+	z-index: 1; 
+}
+
+.nav-item {
+	text-align: right;
+	padding-left: 2%;
+	padding-right: 2%;
+}

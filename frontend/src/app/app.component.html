@@ -1,0 +1,15 @@
+<body>
+	<div class="container-fluid p-0">
+		<app-stock-search-navbar [ticker_symbol]="ticker_symbol" [isSaved]="isSaved"></app-stock-search-navbar>
+		
+		<div class="row router">
+			<div class="col">
+				<router-outlet></router-outlet>
+				<br>
+			</div>
+		</div>
+		
+		<app-finnhub-footer></app-finnhub-footer>
+		
+	</div>
+</body>

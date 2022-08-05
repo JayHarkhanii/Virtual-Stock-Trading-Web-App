@@ -1,0 +1,46 @@
+<div class="mat-display-3" style="margin-top: 2.5em;">STOCK SEARCH</div>
+
+
+<form (ngSubmit)="form_submit($event)">
+	<div style="width: 17.3em;" class="form-group">
+		<input type="text" [matAutocomplete]="auto" id="comp_ticker" placeholder="Enter stock name"  [formControl]="frm_ctrl" autocomplete="off" style="height: 2.8em; width: 85%">
+		<mat-autocomplete class="matAutocomplete" #auto="matAutocomplete" [panelWidth]="236" [displayWith]="disp_form">
+			<!-- Spinner is the data is not Loaded or no input is entered-->
+			<mat-option *ngIf="!data_loaded && (comp_ticker_symbol!=='') && !related_companies">
+				<mat-spinner diameter="19"></mat-spinner>
+			</mat-option>
+
+			<!-- If the data is Loaded -->
+			<div *ngIf="data_loaded">
+				<mat-option *ngFor="let company of related_companies" [value]="company?.displaySymbol" (click)="form_submit($event)">
+					<span style="font-size: normal;">{{ company?.displaySymbol }}</span><span
+						style="font-size: small;">&nbsp;|&nbsp;{{ company?.description }}</span>
+				</mat-option>
+			</div>
+
+		</mat-autocomplete>
+
+		<!-- Submit Button -->
+		<button type="submit" class="mat-button" style="top: 0.15em">
+			<svg width="1em" height="1em" viewBox="-0.5 -0.2 16.2 16.2" fill="#1E209B" class="bi bi-search" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+				<path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+			</svg>
+		</button>
+
+			<!-- Reset Button -->
+			<button type="reset" class="mat-button">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="#1E209B" width="2.1em" height="2.1em"  class="bi bi-x" viewBox="0.2 0.2 16.2 16.2"  type="button">
+					<path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+				</svg>
+			</button>
+
+	</div>
+</form>
+
+<div style="margin-top: 90px;">
+	<div *ngIf="!inp_entered" class="alert alert-danger mat-body-1 w-responsive text-center mx-auto mt-5" id="empty_input" role="alert">
+		Please enter a valid ticker
+		<button type="button" class="close rmw" data-dismiss="alert" (click)="dismiss_alert('empty_input')"> <span> &times; </span> </button>
+	</div>
+</div>

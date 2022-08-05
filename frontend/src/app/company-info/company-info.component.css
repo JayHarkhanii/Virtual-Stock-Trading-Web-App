@@ -1,0 +1,333 @@
+.mat-display-3 {
+	font-family: 'Hind', sans-serif;
+	font-weight: 700;
+	font-size: 2em;
+	text-align: center;
+	margin: 3vh 0 5vh;
+	z-index: 6;
+}
+
+.form-group {
+	margin: 0;
+	position: absolute;
+	width: 17.3em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	outline: none;
+	box-shadow: 0 0 0 2.5px #1e209b; /*0.15em*/
+	border-radius: 25px;
+	width: 30%;
+}
+
+.search-btn{
+    margin-left: -7em;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.bi-x{
+	margin-left: 0.5em;
+	margin-right: -0.5em;
+	vertical-align: middle;
+	display: inline-block;
+	opacity: 0.7;
+	
+}
+
+input:focus {
+	box-shadow: none;
+}
+
+input[type="text"] {
+	outline: none;
+	border: transparent;
+	border-radius: 25px;
+	font-size: small;
+	padding-left: 0.8em;
+}
+
+.mat-button {
+	position: absolute;
+	top: 0em;
+	right: 0.9em;
+	border-style: none;
+}
+
+.mat-button:focus, .mat-button:active {
+	outline: none !important;
+	/* border:2px solid #ccc; */
+	/* border-radius: 0.2em; */
+}
+
+.bi-search {
+	margin-left: -7em; 
+	margin-top: 0.3em; 
+	margin-bottom: 0.5em;
+	vertical-align: middle;
+	display: inline-block;
+	height: 1.2em;
+	width: 2em;
+}
+
+.bi-x {
+	margin-left: 0.5em; 
+	margin-right: -0.5em;
+	margin-top: 0.1em;
+	vertical-align: middle;
+	display: inline-block;
+	height: 2.3em;
+	width: 2.3em;
+}
+
+.auto-tick{
+	font-size: normal;
+}
+
+.auto-name{
+	font-size: small;
+}
+
+#my-master-container {
+	padding: 0;
+	min-width: 85%;
+  width: calc((26em - 100%) * 1000);
+  max-width: 90%;
+}
+
+#invalid-ticker {
+  color: black;
+  font-weight: 300;
+	min-width: 72%;
+  width: calc((30em - 100%) * 1000);
+  max-width: 95%;
+}
+.container  {
+	margin: 0;
+  margin-top: 8em;
+}
+
+.container1  {
+  margin: 0;
+  margin-top: 1em;
+  margin-left: 0.5em;
+}
+
+.container2  {
+  margin: 0;
+  margin-top: 1em;
+	/* margin-left: -0.5em; */
+}
+.container-fluid {
+	margin-top: 2em;
+}
+
+
+/*to remove the pagination buttons that sometimes came*/
+::ng-deep .mat-tab-header-pagination {
+    display: none !important;
+}
+
+.mat-tab-label-container {
+    display: flex;
+    flex-grow: 1;
+    /* overflow: hidden; */
+    z-index: 1;
+    overflow-x: scroll !important;
+}
+
+#stock-sell{
+	margin-left: 0.4em;
+}
+
+#high, #mid, #low, #askP, #askS, #bidP, #bidS, #open, #prevClose, #vol {
+    display: inline-block;
+    position: absolute;
+}
+
+.myrow1 .mat-display-1, .myrow2 .mat-headline, .myrow3 .mat-body-2 {
+	font-family: 'Hind';
+}
+
+.myrow1 .mat-display-1, .myrow2 .mat-headline, .myrow3 .mat-body-2 {
+	margin: 0;
+}
+
+#descHead {
+	margin-top: 0% ;
+    text-align: center;
+}
+#smr_prc {
+	margin-top: 0%;
+	text-align: center;
+	margin-left: -20%;
+	padding-left: 10px;
+}
+
+.myrow1 .mat-display-1 {
+	font-size: 3em;
+	font-weight: 500;
+}
+
+.myrow3 .mat-body-2 {
+	font-weight: normal;
+}
+
+.toLeft {
+	margin: 0 !important;
+	padding-left: 0 !important;
+	text-align: left;
+}
+
+.toRight {
+	margin: 0;
+	padding-right: 0 !important;
+	text-align: right;
+}
+#changeAndAllP {
+	display:inline-block;
+}
+
+#ticker, .bi-star {
+	text-align: left;
+	display:inline-block;
+	margin:0;
+	padding: 0;
+}
+
+#openclose {
+	padding: 0;
+	display: inline-block;
+	border: none;
+	border-radius: 0;
+	font-weight: normal;
+}
+
+.mynewscards {
+		cursor: pointer;
+}
+.mynewscards .card-body {
+	text-align: left;
+}
+
+.card-text mat-body-1{
+	width: 100%; 
+	height: auto;
+}
+
+.card-img{
+	width: 100%; 
+	height: auto; 
+	float: middle;
+}
+
+.card modalcard{
+	width: 100%; 
+	height: 100%
+}
+
+.modal-title {
+		font-weight: 400;
+		font-size: 2em;
+}
+
+.modal-subtitle {
+		font-size: 1em;
+		font-weight: bold;
+		color: grey;
+}
+
+.close {
+		right: 0.5em;
+}
+
+.modal-body-title {
+		font-size: 1.3em;
+		font-weight: 500;
+}
+
+.modal-body-link {
+		color: grey;
+}
+
+button[aria-label="Close"]:focus {
+  outline: none;
+}
+
+#stock_quantity {
+	padding: 0.4em;
+	padding-left: 0.6em;
+}
+
+.company-highchart{
+	width: 100%; 
+	height: 45em; 
+	display: block; 
+	margin-top: 2em;
+}
+
+/*fonts*/
+#ticker, #compName, #exchangeCode, #descHead {
+	font-family: 'Hind', sans-serif;
+}
+
+ #last, #changeAndAllP, #currentTime {
+	font-family: 'Average Sans', sans-serif;
+}
+
+#ticker {
+	font-size: 2.5em;
+}
+
+#last {
+	font-size: 2.5em;
+}
+
+#compName {
+	font-size: 1.7em;
+}
+
+#descHead {
+	font-size: 1.3em;
+	font-weight: 500;
+}
+
+#newsSN, #newsPA {
+	font-family: 'Roboto', sans-serif;
+}
+
+#newsPA {
+	font-weight: 500;
+	font-size: 1.1em;
+}
+
+.col-12 {
+	z-index: 0;
+}
+
+.tableCol {
+	background:#e9ecef;
+}
+
+.table {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Sentiments{
+	margin-top: 2em;
+}
+
+.earnings-highchart{
+	width: 30em; 
+	height: auto;
+}
+
+.daily-chart{
+	width: 100%; 
+	height: auto; 
+	min-width: 15em; 
+	display: block;
+}

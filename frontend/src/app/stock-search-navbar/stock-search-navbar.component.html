@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a (click) = "navigate_to('stocksearch/home', $event);" class="navbar-brand" href="/">Stock Search</a>
+            <button (click)="collapsed = !collapsed" class="navbar-toggler" type="button" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div [ngbCollapse]="collapsed" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li *ngIf="!isSaved" id="search" class="nav-item" >
+                        <a (click) = "navigate_to('stocksearch/home', $event);" class="nav-link" href="/stocksearch/home">Search</a>
+                    </li>
+                    <li *ngIf="isSaved" class="nav-item" id="search">
+                        <a (click) = "navigate_to('search/'+ticker_symbol, $event);" class="nav-link" href="/search/{{ticker_symbol}}">Search</a>
+                    </li>
+                    <li class="nav-item" id="watchlist">
+                        <a (click) = "navigate_to('watchlist', $event);" class="nav-link" href="/watchlist">Watchlist</a>
+                    </li>
+                    <li class="nav-item" id="portfolio">
+                        <a (click) = "navigate_to('portfolio', $event);" class="nav-link" href="/portfolio">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
